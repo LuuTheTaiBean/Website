@@ -1,0 +1,114 @@
+[
+  {
+    "book": "book1",
+    "unit": "Unit 1: Hello",
+    "lyrics": "<b>A</b> Hello. I’m David Clark.<br><b>B</b> Hello. I’m Linda Martin.<br><br><b>C</b> Are you a teacher?<br><b>D</b> No, I’m not.<br><b>C</b> Oh, are you a student?<br><b>D</b> Yes. I am.<br><br><b>E</b> Are you from England?<br><b>F</b> No, I’m not.<br><b>E</b> Where are you from?<br><b>F</b> I’m from Canada.<br><br><b>G</b> Hello, John!<br><b>H</b> Hello, Peter. How are you?<br><b>G</b> I’m very well, thanks. And you?<br><b>H</b> I’m fine, thanks.<br>",
+    "image": "./img/01__1--Image.svg",
+    "alt": "Greetings"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 2: Introductions",
+    "lyrics": "My name is John.",
+    "image": "example2.jpg",
+    "alt": "Introductions"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 3: Family",
+    "lyrics": "This is my family.",
+    "image": "example3.jpg",
+    "alt": "Family"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 4: Numbers",
+    "lyrics": "One, two, three...",
+    "image": "example4.jpg",
+    "alt": "Numbers"
+  },
+  {
+    "book": "book2",
+    "unit": "Unit 1: Colors",
+    "lyrics": "Red, blue, green...",
+    "image": "example5.jpg",
+    "alt": "Colors"
+  },
+  {
+    "book": "book2",
+    "unit": "Unit 2: Shapes",
+    "lyrics": "Circle, square, triangle...",
+    "image": "example6.jpg",
+    "alt": "Shapes"
+  },
+  {
+    "book": "book2",
+    "unit": "Unit 3: Animals",
+    "lyrics": "Dog, cat, elephant...",
+    "image": "example7.jpg",
+    "alt": "Animals"
+  },
+  {
+    "book": "book2",
+    "unit": "Unit 4: Fruits",
+    "lyrics": "Apple, banana, cherry...",
+    "image": "example8.jpg",
+    "alt": "Fruits"
+  },
+  {
+    "book": "book3",
+    "unit": "Unit 1: Weather",
+    "lyrics": "Sunny, rainy, cloudy...",
+    "image": "example9.jpg",
+    "alt": "Weather"
+  },
+  {
+    "book": "book3",
+    "unit": "Unit 2: Seasons",
+    "lyrics": "Spring, summer, fall...",
+    "image": "example10.jpg",
+    "alt": "Seasons"
+  },
+  {
+    "book": "book3",
+    "unit": "Unit 3: Time",
+    "lyrics": "Morning, afternoon, night...",
+    "image": "example11.jpg",
+    "alt": "Time"
+  },
+  {
+    "book": "book3",
+    "unit": "Unit 4: Days",
+    "lyrics": "Monday, Tuesday, Wednesday...",
+    "image": "example12.jpg",
+    "alt": "Days"
+  },
+  {
+    "book": "book4",
+    "unit": "Unit 1: Transportation",
+    "lyrics": "Car, bus, train...",
+    "image": "example13.jpg",
+    "alt": "Transportation"
+  },
+  {
+    "book": "book4",
+    "unit": "Unit 2: Jobs",
+    "lyrics": "Doctor, teacher, engineer...",
+    "image": "example14.jpg",
+    "alt": "Jobs"
+  },
+  {
+    "book": "book4",
+    "unit": "Unit 3: Hobbies",
+    "lyrics": "Reading, swimming, painting...",
+    "image": "example15.jpg",
+    "alt": "Hobbies"
+  },
+  {
+    "book": "book4",
+    "unit": "Unit 4: Sports",
+    "lyrics": "Soccer, basketball, tennis...",
+    "image": "example16.jpg",
+    "alt": "Sports"
+  }
+]
