@@ -46,7 +46,7 @@
   {
     "title": "A COMME AMOUR",
     "artist": "Richard Clayderman",
-    "lyrics": "NULL",
+    "lyrics": "./Lyrics/NULL.txt",
     "number": "000004",
     "rating": "⭐⭐⭐",
     "year": 1978,
@@ -211,7 +211,7 @@
   {
     "title": "ANNIVERSARY",
     "artist": "NULL",
-    "lyrics": "",
+    "lyrics": "./Lyrics/NULL.txt",
     "number": "000019",
     "rating": "⭐⭐⭐",
     "year": "NULL",
