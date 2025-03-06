@@ -32,26 +32,61 @@
       .fa-solid {
         font-size: 20px;
       }
+
+      /* Bỏ thanh cuộn nhưng vẫn cho phép cuộn nội dung */
+      .sidebar {
+        overflow-y: scroll; /* Cho phép cuộn dọc */
+        scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+        -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
+        height: 100vh; /* Chiều cao full màn hình */
+      }
+
+      /* Ẩn thanh cuộn trên Chrome, Safari */
+      .sidebar::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Giữ tiêu đề sách cố định khi cuộn */
+      .sticky-title {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #2e7eff;
+        padding: 10px;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
     <div class="container-fluid d-flex p-0">
       <!-- Sidebar -->
-      <div class="col-md-2 border-end vh-100 overflow-auto">
+      <div class="col-md-2 sidebar border-end vh-100 overflow-auto">
         <ul class="list-unstyled">
-          <li class="sticky-title p-3" onclick="toggleSubList('book1')">
+          <li
+            class="sticky-title p-3 bg-success"
+            onclick="toggleSubList('book1')"
+          >
             Streamline English 1
           </li>
           <ul id="book1" class="list-unstyled d-none"></ul>
-          <li class="sticky-title p-3" onclick="toggleSubList('book2')">
+          <li
+            class="sticky-title p-3 bg-success"
+            onclick="toggleSubList('book2')"
+          >
             Streamline English 2
           </li>
           <ul id="book2" class="list-unstyled d-none"></ul>
-          <li class="sticky-title p-3" onclick="toggleSubList('book3')">
+          <li
+            class="sticky-title p-3 bg-success"
+            onclick="toggleSubList('book3')"
+          >
             Streamline English 3
           </li>
           <ul id="book3" class="list-unstyled d-none"></ul>
-          <li class="sticky-title p-3" onclick="toggleSubList('book4')">
+          <li
+            class="sticky-title p-3 bg-success"
+            onclick="toggleSubList('book4')"
+          >
             Streamline English 4
           </li>
           <ul id="book4" class="list-unstyled d-none"></ul>
@@ -109,6 +144,35 @@
         const subList = document.getElementById(bookId);
         subList.classList.toggle("d-none");
       }
+
+      listItem.addEventListener("click", () => {
+        const unitsContainer = document.getElementById("units-container");
+        const unitId = `unit-${item.unit.replace(/\s+/g, "-")}`;
+        let unitDiv = document.getElementById(unitId);
+
+        // Nếu unit đang hiển thị, ẩn nó đi
+        if (unitDiv) {
+          unitDiv.remove();
+        } else {
+          // Xóa các unit khác trước khi thêm cái mới (nếu muốn hiển thị từng cái một)
+          unitsContainer.innerHTML = "";
+
+          // Thêm unit mới
+          unitDiv = document.createElement("div");
+          unitDiv.id = unitId;
+          unitDiv.innerHTML = `
+      <div class="container my-3">
+        <h2 class="text-center">${item.unit}</h2>
+        <div class="row">
+          <div class="col-md-7 d-flex justify-content-center">
+            <img src="${item.image}" class="img-fluid" alt="${item.alt}" />
+          </div>
+        </div>
+      </div>
+    `;
+          unitsContainer.appendChild(unitDiv);
+        }
+      });
     </script>
   </body>
 </html>
