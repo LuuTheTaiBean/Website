@@ -22,7 +22,8 @@
         width: 15%;
         height: 100vh;
         border-right: 1px solid #ccc;
-        padding: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
       #sidebar ul {
         list-style: none;
@@ -77,6 +78,53 @@
         max-width: 100%;
         max-height: 100vh;
       }
+      .scroll-container {
+        max-height: 100vh; /* Giới hạn chiều cao cho cả danh sách */
+        overflow-y: auto; /* Thanh cuộn dọc */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .sticky-title {
+        background-color: #2e7eff;
+        padding: 15px;
+        font-weight: bold;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .sub-list li {
+        padding: 10px;
+      }
+
+      .sub-list li:hover {
+        background-color: #eaeaea;
+      }
+      li {
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      li:hover {
+        background-color: #f4f4f4;
+      }
+      /* Ẩn thanh cuộn trên các trình duyệt khác nhau */
+      .scroll-container::-webkit-scrollbar {
+        width: 0; /* Chrome, Safari */
+      }
+
+      .scroll-container {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE, Edge */
+      }
       @media (max-width: 768px) {
         body {
           flex-direction: column;
@@ -92,15 +140,23 @@
     </style>
   </head>
   <body>
-    <div id="sidebar">
+    <div id="sidebar" class="scroll-container">
       <ul>
-        <li onclick="toggleSubList('book1')"><b>Streamline English 1</b></li>
+        <li onclick="toggleSubList('book1')" class="sticky-title">
+          <b>Streamline English 1</b>
+        </li>
         <ul id="book1" class="sub-list"></ul>
-        <li onclick="toggleSubList('book2')"><b>Streamline English 2</b></li>
+        <li onclick="toggleSubList('book2')" class="sticky-title">
+          <b>Streamline English 2</b>
+        </li>
         <ul id="book2" class="sub-list"></ul>
-        <li onclick="toggleSubList('book3')"><b>Streamline English 3</b></li>
+        <li onclick="toggleSubList('book3')" class="sticky-title">
+          <b>Streamline English 3</b>
+        </li>
         <ul id="book3" class="sub-list"></ul>
-        <li onclick="toggleSubList('book4')"><b>Streamline English 4</b></li>
+        <li onclick="toggleSubList('book4')" class="sticky-title">
+          <b>Streamline English 4</b>
+        </li>
         <ul id="book4" class="sub-list"></ul>
       </ul>
     </div>
