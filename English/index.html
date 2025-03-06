@@ -16,12 +16,11 @@
         display: flex;
         flex-direction: row;
         max-width: 100vw;
-        max-height: 100vh;
         background-color: #2e7eff;
       }
       #sidebar {
         width: 15%;
-        height: 500vh;
+        height: 100vh;
         border-right: 1px solid #ccc;
         padding: 20px;
       }
@@ -51,7 +50,6 @@
       .container {
         display: grid;
         grid-template-rows: auto 4fr 6fr;
-        gap: 10px;
         padding: 10px;
         padding-left: 0;
         height: 700px;
@@ -72,6 +70,7 @@
       .image {
         padding: 10px;
         border: 1px solid #ccc;
+        border-left: none;
         text-align: center;
       }
       img {
@@ -130,8 +129,8 @@
                 document.getElementById("units-container").innerHTML = `
                                 <div class="container">
                                     <div class="unit">${item.unit}</div>
-                                    <div class="lyrics">${item.lyrics}</div>
                                     <div class="image"><img src="${item.image}" alt="${item.alt}"></div>
+                                     <div class="lyrics">${item.lyrics}</div>
                                 </div>
                             `;
               });
