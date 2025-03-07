@@ -222,33 +222,6 @@
         });
       }
 
-      async function displaySong() {
-        if (songs.length === 0) return;
-        const song = songs[currentIndex];
-        document.getElementById("songTitle").textContent = song.title;
-        document.getElementById("songArtist").textContent = song.artist;
-        document.getElementById("songNumber").textContent = song.number;
-        document.getElementById("songRating").textContent = song.rating;
-        document.getElementById("songYear").textContent = song.year;
-        const songLink = document.getElementById("songLink");
-        songLink.innerHTML = `<a href="${song.link}" target="_blank">${song.link}</a>`;
-        document.getElementById("songDescription").textContent =
-          song.description;
-        document.getElementById("audioPlayer").src = song.official;
-        document.getElementById("mobileAudioPlayer").src = song.official;
-
-        // Fetch lời bài hát
-        try {
-          const lyricsResponse = await fetch(song.lyrics);
-          if (!lyricsResponse.ok) throw new Error("Không thể tải lời bài hát");
-          const lyrics = await lyricsResponse.text();
-          document.getElementById("songLyrics").innerHTML = lyrics;
-        } catch (error) {
-          console.error("Lỗi tải lời bài hát:", error);
-          document.getElementById("songLyrics").textContent =
-            "Dữ liệu bài hát chưa được cập nhật.";
-        }
-      }
       function searchSong(event) {
         let input = event.target.value.toLowerCase();
         let suggestionsList = document.getElementById("suggestionsList");
@@ -510,7 +483,7 @@
         } catch (error) {
           console.error("Lỗi tải lời bài hát:", error);
           document.getElementById("lyricsContainer").textContent =
-            "Lời bài hát chưa có.";
+            "Lời bài hát chưa cập nhật.";
         }
       }
 
@@ -574,6 +547,13 @@
         const song = songs[currentIndex];
         document.getElementById("songTitle").textContent = song.title;
         document.getElementById("songArtist").textContent = song.artist;
+        document.getElementById("songNumber").textContent = song.number;
+        document.getElementById("songRating").textContent = song.rating;
+        document.getElementById("songYear").textContent = song.year;
+        const songLink = document.getElementById("songLink");
+        songLink.innerHTML = `<a href="${song.link}" target="_blank">${song.link}</a>`;
+        document.getElementById("songDescription").textContent =
+          song.description;
         document.getElementById("audioPlayer").src = song.official;
         document.getElementById("mobileAudioPlayer").src = song.official;
 
