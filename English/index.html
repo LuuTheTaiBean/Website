@@ -144,35 +144,6 @@
         const subList = document.getElementById(bookId);
         subList.classList.toggle("d-none");
       }
-
-      listItem.addEventListener("click", () => {
-        const unitsContainer = document.getElementById("units-container");
-        const unitId = `unit-${item.unit.replace(/\s+/g, "-")}`;
-        let unitDiv = document.getElementById(unitId);
-
-        // Nếu unit đang hiển thị, ẩn nó đi
-        if (unitDiv) {
-          unitDiv.remove();
-        } else {
-          // Xóa các unit khác trước khi thêm cái mới (nếu muốn hiển thị từng cái một)
-          unitsContainer.innerHTML = "";
-
-          // Thêm unit mới
-          unitDiv = document.createElement("div");
-          unitDiv.id = unitId;
-          unitDiv.innerHTML = `
-      <div class="container my-3">
-        <h2 class="text-center">${item.unit}</h2>
-        <div class="row">
-          <div class="col-md-7 d-flex justify-content-center">
-            <img src="${item.image}" class="img-fluid" alt="${item.alt}" />
-          </div>
-        </div>
-      </div>
-    `;
-          unitsContainer.appendChild(unitDiv);
-        }
-      });
     </script>
   </body>
 </html>
