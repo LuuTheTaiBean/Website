@@ -185,11 +185,10 @@ header {
 }
 /* Chữ chạy theo audio */
 .lyrics-container {
-  max-height: 300px;
+  /* max-height: 300px; */
   overflow-y: auto;
-  padding: 10px;
-  font-size: 1.2em;
-  line-height: 1.6;
+  /* font-size: 1.2em; */
+  /* line-height: 1.6; */
 }
 
 .lyrics-container p {
