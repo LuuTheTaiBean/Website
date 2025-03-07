@@ -32,7 +32,9 @@
       .fa-solid {
         font-size: 20px;
       }
-
+      .fa-bars {
+        color: #f8ff1e;
+      }
       /* Bỏ thanh cuộn nhưng vẫn cho phép cuộn nội dung */
       .sidebar {
         overflow-y: scroll; /* Cho phép cuộn dọc */
@@ -60,7 +62,9 @@
   <body>
     <div class="container-fluid d-flex p-0">
       <!-- Sidebar -->
-      <div class="col-md-2 sidebar border-end vh-100 overflow-auto">
+      <div
+        class="col-md-2 sidebar border-end vh-100 overflow-auto d-none d-md-block"
+      >
         <ul class="list-unstyled">
           <li
             class="sticky-title p-3 bg-success"
@@ -92,6 +96,32 @@
           <ul id="book4" class="list-unstyled d-none"></ul>
         </ul>
       </div>
+
+      <!-- Offcanvas button -->
+      <button
+        class="btn btn-success position-fixed top-0 end-0 m-3 d-md-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#bookOffcanvas"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Offcanvas -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="bookOffcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Book List</h5>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul id="book-list" class="list-unstyled"></ul>
+        </div>
+      </div>
+
       <!-- Content -->
       <div class="col-md-9 p-3">
         <div id="units-container"></div>
