@@ -13,7 +13,7 @@
   {
     "title": "大得勝",
     "artist": "閻惠昌",
-    "lyrics": "./Lyrics/NULL.txt",
+    "lyrics": "./Lyrics/NULL.lrc",
     "number": "000001",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -24,7 +24,7 @@
   {
     "title": "100 WAYS",
     "artist": "Jackson Wang",
-    "lyrics": "./Lyrics/000002.txt",
+    "lyrics": "./Lyrics/000002.lrc",
     "number": "000002",
     "rating": "⭐⭐⭐",
     "year": 2020,
