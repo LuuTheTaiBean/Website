@@ -183,3 +183,21 @@ header {
 .song-list.show {
   max-height: 1000px;
 }
+/* Chữ chạy theo audio */
+.lyrics-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.lyrics-container p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.lyrics-container p.active {
+  color: #ff5722;
+  font-weight: bold;
+}

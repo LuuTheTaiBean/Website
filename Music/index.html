@@ -102,7 +102,7 @@
           <div class="col-lg-6 border border-dark mb-3">
             <h2 class="text-danger text-center" id="songTitle"></h2>
             <h4 class="text-end" id="songArtist"></h4>
-            <p class="text-wrap" id="songLyrics"></p>
+            <div id="lyricsContainer" class="lyrics-container"></div>
           </div>
           <div class="col-lg-3 py-4">
             <p><strong>Number:</strong> <span id="songNumber"></span></p>
@@ -496,6 +496,89 @@
       // Sự kiện khi bài hát kết thúc -> phát bài ngẫu nhiên
       audio.addEventListener("ended", playRandomSong);
       mobileAudio.addEventListener("ended", playRandomSong);
+
+      // Chữ đỏ chạy theo audio
+      let lyrics = [];
+      let currentLine = -1;
+
+      async function loadLyrics(lyricsUrl) {
+        try {
+          const response = await fetch(lyricsUrl);
+          if (!response.ok) throw new Error("Không thể tải lời bài hát");
+          const lrcText = await response.text();
+          parseLRC(lrcText);
+        } catch (error) {
+          console.error("Lỗi tải lời bài hát:", error);
+          document.getElementById("lyricsContainer").textContent =
+            "Lời bài hát chưa có.";
+        }
+      }
+
+      function parseLRC(lrcText) {
+        lyrics = lrcText
+          .split("\n")
+          .map((line) => {
+            const match = line.match(/\[(\d+):(\d+\.\d+)\](.*)/);
+            if (match) {
+              const minutes = parseInt(match[1]);
+              const seconds = parseFloat(match[2]);
+              const time = minutes * 60 + seconds;
+              return { time, text: match[3].trim() };
+            }
+            return null;
+          })
+          .filter((line) => line);
+
+        displayLyrics();
+      }
+
+      function displayLyrics() {
+        const lyricsContainer = document.getElementById("lyricsContainer");
+        lyricsContainer.innerHTML = lyrics
+          .map((lyric) => `<p>${lyric.text}</p>`)
+          .join("");
+      }
+
+      function highlightCurrentLyric(currentTime) {
+        for (let i = 0; i < lyrics.length; i++) {
+          if (lyrics[i].time > currentTime) {
+            if (currentLine !== i - 1) {
+              currentLine = i - 1;
+              updateLyricsHighlight();
+            }
+            break;
+          }
+        }
+      }
+
+      function updateLyricsHighlight() {
+        const lyricsContainer = document.getElementById("lyricsContainer");
+        const lines = lyricsContainer.getElementsByTagName("p");
+        Array.from(lines).forEach((line, index) => {
+          line.classList.toggle("active", index === currentLine);
+        });
+      }
+
+      // Sự kiện cập nhật lời theo thời gian của audio
+      audio.addEventListener("timeupdate", () => {
+        highlightCurrentLyric(audio.currentTime);
+      });
+
+      mobileAudio.addEventListener("timeupdate", () => {
+        highlightCurrentLyric(mobileAudio.currentTime);
+      });
+
+      // Cập nhật trong hàm displaySong để load lyrics
+      async function displaySong() {
+        if (songs.length === 0) return;
+        const song = songs[currentIndex];
+        document.getElementById("songTitle").textContent = song.title;
+        document.getElementById("songArtist").textContent = song.artist;
+        document.getElementById("audioPlayer").src = song.official;
+        document.getElementById("mobileAudioPlayer").src = song.official;
+
+        await loadLyrics(song.lyrics);
+      }
     </script>
   </body>
 </html>
