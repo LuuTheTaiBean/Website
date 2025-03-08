@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto LRC Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      h2 {
+        text-align: center;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      textarea {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      button,
+      input[type="file"] {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Auto LRC Generator</h2>
+      <label>Upload Audio:</label>
+      <input type="file" accept="audio/*" onchange="loadAudio(event)" />
+      <br />
+      <label>Upload Lyrics (Plain Text):</label>
+      <input type="file" accept=".txt" onchange="loadLyrics(event)" />
+      <br />
+      <audio id="audio" controls></audio>
+      <br />
+      <textarea
+        id="lrc-output"
+        rows="15"
+        placeholder="Generated LRC will appear here..."
+        readonly
+      ></textarea>
+      <br />
+      <button id="start-sync">Start Sync</button>
+      <button id="download-lrc">Download .lrc</button>
+    </div>
+
+    <script>
+      const audio = document.getElementById("audio");
+      const lrcOutput = document.getElementById("lrc-output");
+      const downloadBtn = document.getElementById("download-lrc");
+      const startSyncBtn = document.getElementById("start-sync");
+      let lyrics = [];
+      let lrc = "";
+      let currentLine = 0;
+
+      window.loadAudio = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+          const url = URL.createObjectURL(file);
+          audio.src = url;
+        }
+      };
+
+      window.loadLyrics = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            lyrics = e.target.result
+              .split("\n")
+              .filter((line) => line.trim() !== "");
+            alert(
+              'Lyrics loaded! Press "Start Sync" and play the audio. Click the button each time a line is sung.'
+            );
+          };
+          reader.readAsText(file);
+        }
+      };
+
+      function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60)
+          .toString()
+          .padStart(2, "0");
+        const secs = (seconds % 60).toFixed(2).padStart(5, "0");
+        return `[${minutes}:${secs}]`;
+      }
+
+      startSyncBtn.addEventListener("click", () => {
+        if (currentLine >= lyrics.length) {
+          alert("All lines are synced!");
+          return;
+        }
+        const timestamp = formatTime(audio.currentTime);
+        lrc += `${timestamp} ${lyrics[currentLine]}\n`;
+        lrcOutput.value = lrc;
+        currentLine++;
+      });
+
+      downloadBtn.addEventListener("click", () => {
+        const blob = new Blob([lrcOutput.value], { type: "text/plain" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "lyrics.lrc";
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    </script>
+  </body>
+</html>
