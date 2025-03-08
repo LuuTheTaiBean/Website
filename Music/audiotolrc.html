@@ -42,6 +42,17 @@
       button:hover {
         background-color: #0056b3;
       }
+      .lyrics-preview {
+        border: 1px solid #ccc;
+        padding: 10px;
+        background: #f9f9f9;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      .current-line {
+        font-weight: bold;
+        color: #007bff;
+      }
     </style>
   </head>
   <body>
@@ -55,6 +66,9 @@
       <br />
       <audio id="audio" controls></audio>
       <br />
+      <div class="lyrics-preview" id="lyrics-preview">
+        Next line will appear here...
+      </div>
       <textarea
         id="lrc-output"
         rows="15"
@@ -71,6 +85,7 @@
       const lrcOutput = document.getElementById("lrc-output");
       const downloadBtn = document.getElementById("download-lrc");
       const startSyncBtn = document.getElementById("start-sync");
+      const lyricsPreview = document.getElementById("lyrics-preview");
       let lyrics = [];
       let lrc = "";
       let currentLine = 0;
@@ -91,6 +106,7 @@
             lyrics = e.target.result
               .split("\n")
               .filter((line) => line.trim() !== "");
+            updateLyricsPreview();
             alert(
               'Lyrics loaded! Press "Start Sync" and play the audio. Click the button each time a line is sung.'
             );
@@ -107,6 +123,12 @@
         return `[${minutes}:${secs}]`;
       }
 
+      function updateLyricsPreview() {
+        lyricsPreview.textContent = lyrics[currentLine]
+          ? lyrics[currentLine]
+          : "All lines synced!";
+      }
+
       startSyncBtn.addEventListener("click", () => {
         if (currentLine >= lyrics.length) {
           alert("All lines are synced!");
@@ -116,6 +138,7 @@
         lrc += `${timestamp} ${lyrics[currentLine]}\n`;
         lrcOutput.value = lrc;
         currentLine++;
+        updateLyricsPreview();
       });
 
       downloadBtn.addEventListener("click", () => {
