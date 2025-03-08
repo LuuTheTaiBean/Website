@@ -35,7 +35,7 @@
   {
     "title": "100 YEARS LOVE",
     "artist": "Nam Đức",
-    "lyrics": "./Lyrics/000003.txt",
+    "lyrics": "./Lyrics/000003.lrc",
     "number": "000003",
     "rating": "⭐⭐⭐",
     "year": 2020,
@@ -46,7 +46,7 @@
   {
     "title": "A COMME AMOUR",
     "artist": "Richard Clayderman",
-    "lyrics": "./Lyrics/NULL.txt",
+    "lyrics": "./Lyrics/NULL.lrc",
     "number": "000004",
     "rating": "⭐⭐⭐",
     "year": 1978,
@@ -57,7 +57,7 @@
   {
     "title": "ALL FALLS DOWN",
     "artist": "Alan Walker",
-    "lyrics": "./Lyrics/000005.txt",
+    "lyrics": "./Lyrics/000005.lrc",
     "number": "000005",
     "rating": "⭐⭐⭐",
     "year": 2017,
@@ -68,7 +68,7 @@
   {
     "title": "ALONE",
     "artist": "Alan Walker",
-    "lyrics": "./Lyrics/000006.txt",
+    "lyrics": "./Lyrics/000006.lrc",
     "number": "000006",
     "rating": "⭐⭐⭐",
     "year": 2016,
@@ -79,7 +79,7 @@
   {
     "title": "ANOTHER LOVE",
     "artist": "Tom Odell",
-    "lyrics": "./Lyrics/000007.txt",
+    "lyrics": "./Lyrics/000007.lrc",
     "number": "000007",
     "rating": "⭐⭐⭐",
     "year": 2013,
@@ -90,7 +90,7 @@
   {
     "title": "2STEP",
     "artist": "Ed Sheeran",
-    "lyrics": "./Lyrics/000008.txt",
+    "lyrics": "./Lyrics/000008.lrc",
     "number": "000008",
     "rating": "⭐⭐",
     "year": 2021,
@@ -101,7 +101,7 @@
   {
     "title": "AT MY WORST",
     "artist": "Pink Sweat$",
-    "lyrics": "./Lyrics/000009.txt",
+    "lyrics": "./Lyrics/000009.lrc",
     "number": "000009",
     "rating": "⭐⭐⭐",
     "year": 2021,
@@ -112,7 +112,7 @@
   {
     "title": "ARE YOU WITH ME",
     "artist": "Lost Frequencies",
-    "lyrics": "./Lyrics/000010.txt",
+    "lyrics": "./Lyrics/000010.lrc",
     "number": "000010",
     "rating": "⭐⭐⭐",
     "year": 2014,
@@ -123,7 +123,7 @@
   {
     "title": "BABY",
     "artist": "Clean Bandit",
-    "lyrics": "./Lyrics/000011.txt",
+    "lyrics": "./Lyrics/000011.lrc",
     "number": "000011",
     "rating": "⭐⭐⭐",
     "year": 2018,
@@ -145,7 +145,7 @@
   {
     "title": "BAD ROMANCE",
     "artist": "Lady Gaga",
-    "lyrics": "./Lyrics/000013.txt",
+    "lyrics": "./Lyrics/000013.lrc",
     "number": "000013",
     "rating": "⭐⭐⭐",
     "year": 2009,
@@ -156,7 +156,7 @@
   {
     "title": "BAHAMA MAMA",
     "artist": "Boney M",
-    "lyrics": "./Lyrics/000014.txt",
+    "lyrics": "./Lyrics/000014.lrc",
     "number": "000014",
     "rating": "⭐⭐⭐",
     "year": 1979,
@@ -167,7 +167,7 @@
   {
     "title": "1234",
     "artist": "Chi Dân",
-    "lyrics": "./Lyrics/000015.txt",
+    "lyrics": "./Lyrics/000015.lrc",
     "number": "000015",
     "rating": "⭐⭐⭐",
     "year": 2016,
@@ -178,7 +178,7 @@
   {
     "title": "A SKY FULL OF STARS",
     "artist": "Coldplay",
-    "lyrics": "./Lyrics/000016.txt",
+    "lyrics": "./Lyrics/000016.lrc",
     "number": "000016",
     "rating": "⭐⭐⭐",
     "year": 2014,
@@ -211,7 +211,7 @@
   {
     "title": "ANNIVERSARY",
     "artist": "NULL",
-    "lyrics": "./Lyrics/NULL.txt",
+    "lyrics": "./Lyrics/NULL.lrc",
     "number": "000019",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1080,7 +1080,7 @@
   {
     "title": "BẢN GIAO HƯỞNG ĐỊNH MỆNH SỐ 5",
     "artist": "Ludwig Van Beethoven",
-    "lyrics": "./Lyrics/000098.txt",
+    "lyrics": "./Lyrics/000098.lrc",
     "number": "000098",
     "rating": "⭐⭐⭐",
     "year": 1808,
@@ -1091,7 +1091,7 @@
   {
     "title": "BẢN GIAO HƯỞNG ĐỊNH MỆNH SỐ 6",
     "artist": "Ludwig Van Beethoven",
-    "lyrics": "./Lyrics/000099.txt",
+    "lyrics": "./Lyrics/000099.lrc",
     "number": "000099",
     "rating": "⭐⭐⭐",
     "year": 1808,
@@ -1102,7 +1102,7 @@
   {
     "title": "BẢN GIAO HƯỞNG ĐỊNH MỆNH SỐ 7, 8",
     "artist": "Ludwig Van Beethoven",
-    "lyrics": "./Lyrics/000100.txt",
+    "lyrics": "./Lyrics/000100.lrc",
     "number": "000100",
     "rating": "⭐⭐⭐",
     "year": 1812,
@@ -1113,7 +1113,7 @@
   {
     "title": "BẢN GIAO HƯỞNG ĐỊNH MỆNH SỐ 9",
     "artist": "Ludwig Van Beethoven",
-    "lyrics": "./Lyrics/000101.txt",
+    "lyrics": "./Lyrics/000101.lrc",
     "number": "000101",
     "rating": "⭐⭐⭐",
     "year": 1824,
@@ -1124,7 +1124,7 @@
   {
     "title": "BÀI CA DÀNH CHO NHỮNG XÁC NGƯỜI",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000102.txt",
+    "lyrics": "./Lyrics/000102.lrc",
     "number": "000102",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1135,7 +1135,7 @@
   {
     "title": "BẢN TÌNH CUỐI",
     "artist": "Lệ Quyên",
-    "lyrics": "./Lyrics/000103.txt",
+    "lyrics": "./Lyrics/000103.lrc",
     "number": "000103",
     "rating": "⭐⭐⭐",
     "year": 1968,
@@ -1146,7 +1146,7 @@
   {
     "title": "BẢN GIAO HƯỞNG ĐỊNH MỆNH SỐ 13",
     "artist": "Ludwig Van Beethoven",
-    "lyrics": "./Lyrics/000104.txt",
+    "lyrics": "./Lyrics/000104.lrc",
     "number": "000104",
     "rating": "⭐⭐⭐",
     "year": 1974,
@@ -1157,7 +1157,7 @@
   {
     "title": "BAO GIỜ KẾT HÔN",
     "artist": "Lý Tuấn Kiệt",
-    "lyrics": "./Lyrics/000105.txt",
+    "lyrics": "./Lyrics/000105.lrc",
     "number": "000105",
     "rating": "⭐⭐",
     "year": 2017,
@@ -1168,7 +1168,7 @@
   {
     "title": "BẤT NHIỄM",
     "artist": "Mao Bất Dịch",
-    "lyrics": "./Lyrics/000106.txt",
+    "lyrics": "./Lyrics/000106.lrc",
     "number": "000106",
     "rating": "⭐⭐⭐",
     "year": 2018,
@@ -1179,7 +1179,7 @@
   {
     "title": "BAY ĐI THẦM LẶNG",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000107.txt",
+    "lyrics": "./Lyrics/000107.lrc",
     "number": "000107",
     "rating": "⭐⭐",
     "year": 1972,
@@ -1190,7 +1190,7 @@
   {
     "title": "BBOOM BBOOM",
     "artist": "Momoland",
-    "lyrics": "./Lyrics/000108.txt",
+    "lyrics": "./Lyrics/000108.lrc",
     "number": "000108",
     "rating": "⭐⭐",
     "year": 2018,
@@ -1201,7 +1201,7 @@
   {
     "title": "BEAUTIFUL LIFE - RADIO EDIT",
     "artist": "Lost Frequencies",
-    "lyrics": "./Lyrics/000109.txt",
+    "lyrics": "./Lyrics/000109.lrc",
     "number": "000109",
     "rating": "NULL",
     "year": 2016,
@@ -1212,7 +1212,7 @@
   {
     "title": "BECAUSE I’M STUPID",
     "artist": "SS501",
-    "lyrics": "./Lyrics/000110.txt",
+    "lyrics": "./Lyrics/000110.lrc",
     "number": "000110",
     "rating": "⭐⭐",
     "year": 2009,
@@ -1223,7 +1223,7 @@
   {
     "title": "BẢN GIAO HƯỞNG ĐỊNH MỆNH SỐ 14",
     "artist": "Ludwig Van Beethoven",
-    "lyrics": "./Lyrics/000111.txt",
+    "lyrics": "./Lyrics/000111.lrc",
     "number": "000111",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1234,7 +1234,7 @@
   {
     "title": "BELIEVE",
     "artist": "Jealous Friend",
-    "lyrics": "./Lyrics/000112.txt",
+    "lyrics": "./Lyrics/000112.lrc",
     "number": "000112",
     "rating": "NULL",
     "year": "NULL",
@@ -1245,7 +1245,7 @@
   {
     "title": "BÊN CẬU",
     "artist": "Bất Tử Du",
-    "lyrics": "./Lyrics/000113.txt",
+    "lyrics": "./Lyrics/000113.lrc",
     "number": "000113",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1256,7 +1256,7 @@
   {
     "title": "BÊN ĐỜI HIU QUẠNH",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000114.txt",
+    "lyrics": "./Lyrics/000114.lrc",
     "number": "000114",
     "rating": "⭐⭐⭐",
     "year": 1965,
@@ -1267,7 +1267,7 @@
   {
     "title": "BẾN SÔNG",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000115.txt",
+    "lyrics": "./Lyrics/000115.lrc",
     "number": "000115",
     "rating": "⭐⭐",
     "year": "NULL",
@@ -1278,7 +1278,7 @@
   {
     "title": "BẢN GIAO HƯỞNG ĐỊNH MỆNH SỐ 16",
     "artist": "Ludwig Van Beethoven",
-    "lyrics": "./Lyrics/000116.txt",
+    "lyrics": "./Lyrics/000116.lrc",
     "number": "000116",
     "rating": "NULL",
     "year": "NULL",
@@ -1289,7 +1289,7 @@
   {
     "title": "BEWITCHED, BOTHERED, AND BEWILDERED",
     "artist": "Ella Fitzgerald",
-    "lyrics": "./Lyrics/000117.txt",
+    "lyrics": "./Lyrics/000117.lrc",
     "number": "000117",
     "rating": "NULL",
     "year": "1940 / 1956",
@@ -1300,7 +1300,7 @@
   {
     "title": "BÍ MẬT CỦA ANH",
     "artist": "Nhan Nhân Trung, Echo",
-    "lyrics": "./Lyrics/000118.txt",
+    "lyrics": "./Lyrics/000118.lrc",
     "number": "000118",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1311,7 +1311,7 @@
   {
     "title": "BIỂN NGHÌN THU Ở LẠI",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000119.txt",
+    "lyrics": "./Lyrics/000119.lrc",
     "number": "000119",
     "rating": "NULL",
     "year": "NULL",
@@ -1322,7 +1322,7 @@
   {
     "title": "BIỂN NHỚ",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000120.txt",
+    "lyrics": "./Lyrics/000120.lrc",
     "number": "000120",
     "rating": "NULL",
     "year": 1962,
@@ -1333,7 +1333,7 @@
   {
     "title": "BIỂN SÁNG",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000121.txt",
+    "lyrics": "./Lyrics/000121.lrc",
     "number": "000121",
     "rating": "NULL",
     "year": "NULL",
@@ -1344,7 +1344,7 @@
   {
     "title": "BIẾT ĐÂU NGUỒN CỘI",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000122.txt",
+    "lyrics": "./Lyrics/000122.lrc",
     "number": "000122",
     "rating": "NULL",
     "year": 1990,
@@ -1355,7 +1355,7 @@
   {
     "title": "CẦU VÒNG KHUYẾT",
     "artist": "Tuấn Hưng",
-    "lyrics": "./Lyrics/000123.txt",
+    "lyrics": "./Lyrics/000123.lrc",
     "number": "000123",
     "rating": "⭐⭐⭐",
     "year": 2014,
@@ -1366,7 +1366,7 @@
   {
     "title": "BINIBINI",
     "artist": "Zack Tabu Tabudlo",
-    "lyrics": "./Lyrics/000124.txt",
+    "lyrics": "./Lyrics/000124.lrc",
     "number": "000124",
     "rating": "⭐⭐⭐",
     "year": 2021,
@@ -1377,7 +1377,7 @@
   {
     "title": "BLOOD SWEAT, TEARS",
     "artist": "BTS",
-    "lyrics": "./Lyrics/000125.txt",
+    "lyrics": "./Lyrics/000125.lrc",
     "number": "000125",
     "rating": "⭐⭐⭐",
     "year": 2016,
@@ -1388,7 +1388,7 @@
   {
     "title": "BLOODSTREAM",
     "artist": "Twocolors",
-    "lyrics": "./Lyrics/000126.txt",
+    "lyrics": "./Lyrics/000126.lrc",
     "number": "000126",
     "rating": "NULL",
     "year": 2021,
@@ -1399,7 +1399,7 @@
   {
     "title": "BỎ LỠ MỘT NGƯỜI",
     "artist": "Lê Bảo Bình",
-    "lyrics": "./Lyrics/000127.txt",
+    "lyrics": "./Lyrics/000127.lrc",
     "number": "000127",
     "rating": "⭐⭐⭐",
     "year": 2019,
@@ -1410,7 +1410,7 @@
   {
     "title": "BOM BOM SA CA LA CA",
     "artist": "NULL",
-    "lyrics": "./Lyrics/000128.txt",
+    "lyrics": "./Lyrics/000128.lrc",
     "number": "000128",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1421,7 +1421,7 @@
   {
     "title": "BỐN MÙA THAY LÁ",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000129.txt",
+    "lyrics": "./Lyrics/000129.lrc",
     "number": "000129",
     "rating": "NULL",
     "year": 1981,
@@ -1432,7 +1432,7 @@
   {
     "title": "BỐNG BỒNG ƠI!",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000130.txt",
+    "lyrics": "./Lyrics/000130.lrc",
     "number": "000130",
     "rating": "NULL",
     "year": 1993,
@@ -1443,7 +1443,7 @@
   {
     "title": "BỐNG KHÔNG LÀ BỐNG",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000131.txt",
+    "lyrics": "./Lyrics/000131.lrc",
     "number": "000131",
     "rating": "NULL",
     "year": "NULL",
@@ -1454,7 +1454,7 @@
   {
     "title": "BÓNG MÂY QUA THỀM",
     "artist": "Thu Minh",
-    "lyrics": "./Lyrics/000132.txt",
+    "lyrics": "./Lyrics/000132.lrc",
     "number": "000132",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1465,7 +1465,7 @@
   {
     "title": "CAROL OF THE BELLS",
     "artist": "Lindsey Stirling",
-    "lyrics": "./Lyrics/000133.txt",
+    "lyrics": "./Lyrics/000133.lrc",
     "number": "000133",
     "rating": "NULL",
     "year": 2017,
@@ -1476,7 +1476,7 @@
   {
     "title": "CẶP ĐÔI ĐẸP NHẤT",
     "artist": "Bạch Tiểu Bạch",
-    "lyrics": "./Lyrics/000134.txt",
+    "lyrics": "./Lyrics/000134.lrc",
     "number": "000134",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1487,7 +1487,7 @@
   {
     "title": "CÁT BỤI",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000135.txt",
+    "lyrics": "./Lyrics/000135.lrc",
     "number": "000135",
     "rating": "NULL",
     "year": 1965,
@@ -1498,7 +1498,7 @@
   {
     "title": "CÂU CHUYỆN TÌNH TÔI",
     "artist": "Quang Dũng",
-    "lyrics": "./Lyrics/000136.txt",
+    "lyrics": "./Lyrics/000136.lrc",
     "number": "000136",
     "rating": "⭐⭐",
     "year": "NULL",
@@ -1509,7 +1509,7 @@
   {
     "title": "CAUSE  I LOVE YOU",
     "artist": "Noo Phước Thịnh",
-    "lyrics": "./Lyrics/000137.txt",
+    "lyrics": "./Lyrics/000137.lrc",
     "number": "000137",
     "rating": "⭐⭐⭐",
     "year": 2018,
@@ -1520,7 +1520,7 @@
   {
     "title": "CÂY ĐA QUÁN DỐC",
     "artist": "Mây Trắng",
-    "lyrics": "./Lyrics/000138.txt",
+    "lyrics": "./Lyrics/000138.lrc",
     "number": "000138",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1531,7 +1531,7 @@
   {
     "title": "CHA VÀ CON GÁI",
     "artist": "Thùy Chi",
-    "lyrics": "./Lyrics/000139.txt",
+    "lyrics": "./Lyrics/000139.lrc",
     "number": "000139",
     "rating": "⭐⭐⭐",
     "year": 2008,
@@ -1542,7 +1542,7 @@
   {
     "title": "CHẲNG THỂ TÌM ĐƯỢC EM",
     "artist": "Phucxp",
-    "lyrics": "./Lyrics/000140.txt",
+    "lyrics": "./Lyrics/000140.lrc",
     "number": "000140",
     "rating": "⭐⭐⭐",
     "year": 2020,
@@ -1553,7 +1553,7 @@
   {
     "title": "CHẠNH LÒNG THƯƠNG CÔ 1",
     "artist": "Huy Vạc",
-    "lyrics": "./Lyrics/000141.txt",
+    "lyrics": "./Lyrics/000141.lrc",
     "number": "000141",
     "rating": "NULL",
     "year": 2020,
@@ -1564,7 +1564,7 @@
   {
     "title": "CHẠNH LÒNG THƯƠNG CÔ 2",
     "artist": "Huy Vạc",
-    "lyrics": "./Lyrics/000142.txt",
+    "lyrics": "./Lyrics/000142.lrc",
     "number": "000142",
     "rating": "NULL",
     "year": 2021,
@@ -1575,7 +1575,7 @@
   {
     "title": "CALMA",
     "artist": "Pedro Capo",
-    "lyrics": "./Lyrics/000143.txt",
+    "lyrics": "./Lyrics/000143.lrc",
     "number": "000143",
     "rating": "⭐⭐⭐",
     "year": 2018,
@@ -1586,7 +1586,7 @@
   {
     "title": "CẠM BẪY TÌNH YÊU",
     "artist": "Phan Đình Tùng",
-    "lyrics": "./Lyrics/000144.txt",
+    "lyrics": "./Lyrics/000144.lrc",
     "number": "000144",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1597,7 +1597,7 @@
   {
     "title": "CẢM ƠN CON NHÉ",
     "artist": "Văn Tứ Quý",
-    "lyrics": "./Lyrics/000145.txt",
+    "lyrics": "./Lyrics/000145.lrc",
     "number": "000145",
     "rating": "⭐⭐⭐",
     "year": "NULL",
@@ -1608,7 +1608,7 @@
   {
     "title": "CẢM ƠN TÌNH YÊU",
     "artist": "Uyên Linh",
-    "lyrics": "./Lyrics/000146.txt",
+    "lyrics": "./Lyrics/000146.lrc",
     "number": "000146",
     "rating": "⭐⭐⭐",
     "year": 2010,
@@ -1619,7 +1619,7 @@
   {
     "title": "CẦN MỘT AI ĐÓ",
     "artist": "Phạm Đình Thái Ngân",
-    "lyrics": "./Lyrics/000147.txt",
+    "lyrics": "./Lyrics/000147.lrc",
     "number": "000147",
     "rating": "⭐⭐⭐",
     "year": 2014,
@@ -1630,7 +1630,7 @@
   {
     "title": "CÁNH CHIM CÔ ĐƠN",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000148.txt",
+    "lyrics": "./Lyrics/000148.lrc",
     "number": "000148",
     "rating": "NULL",
     "year": "NULL",
@@ -1641,7 +1641,7 @@
   {
     "title": "CÁNH ĐỒNG HÒA BÌNH",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000149.txt",
+    "lyrics": "./Lyrics/000149.lrc",
     "number": "000149",
     "rating": "NULL",
     "year": "NULL",
@@ -1652,7 +1652,7 @@
   {
     "title": "CA DAO MẸ",
     "artist": "Trịnh Công Sơn",
-    "lyrics": "./Lyrics/000150.txt",
+    "lyrics": "./Lyrics/000150.lrc",
     "number": "000150",
     "rating": "NULL",
     "year": 1965,
@@ -1663,7 +1663,7 @@
   {
     "title": "CAFE KHÔNG ĐƯỜNG",
     "artist": "G5R Squad",
-    "lyrics": "./Lyrics/000151.txt",
+    "lyrics": "./Lyrics/000151.lrc",
     "number": "000151",
     "rating": "⭐⭐⭐",
     "year": 2020,
