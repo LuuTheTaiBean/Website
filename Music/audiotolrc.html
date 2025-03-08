@@ -48,10 +48,12 @@
         background: #f9f9f9;
         border-radius: 5px;
         margin-bottom: 10px;
+        height: 100px;
+        overflow-y: auto;
       }
       .current-line {
         font-weight: bold;
-        color: #007bff;
+        color: red;
       }
     </style>
   </head>
@@ -67,7 +69,7 @@
       <audio id="audio" controls></audio>
       <br />
       <div class="lyrics-preview" id="lyrics-preview">
-        Next line will appear here...
+        Next lines will appear here...
       </div>
       <textarea
         id="lrc-output"
@@ -124,9 +126,12 @@
       }
 
       function updateLyricsPreview() {
-        lyricsPreview.textContent = lyrics[currentLine]
-          ? lyrics[currentLine]
-          : "All lines synced!";
+        const previousLine = lyrics[currentLine - 1] || "";
+        const currentLyric = lyrics[currentLine]
+          ? `<span class="current-line">${lyrics[currentLine]}</span>`
+          : "";
+        const nextLine = lyrics[currentLine + 1] || "";
+        lyricsPreview.innerHTML = `${previousLine}<br/>${currentLyric}<br/>${nextLine}`;
       }
 
       startSyncBtn.addEventListener("click", () => {
