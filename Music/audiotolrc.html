@@ -130,6 +130,10 @@
         lyricsPreview.innerHTML = `${previousLine}<br/>${currentLyric}<br/>${nextLine}`;
       }
 
+      function autoScrollLRC() {
+        lrcOutput.scrollTop = lrcOutput.scrollHeight;
+      }
+
       startSyncBtn.addEventListener("click", () => {
         if (currentLine >= lyrics.length) {
           alert("All lines are synced!");
@@ -140,6 +144,7 @@
         lrcOutput.value = lrc;
         currentLine++;
         updateLyricsPreview();
+        autoScrollLRC();
       });
 
       downloadBtn.addEventListener("click", () => {
