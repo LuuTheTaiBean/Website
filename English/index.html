@@ -87,18 +87,29 @@
       </div>
       <!-- Right Sidebar -->
       <div
-        class="col-md-1 border-start vh-100 d-flex flex-column justify-content-between align-items-center p-3"
+        class="col-md-1 border-start vh-100 d-flex flex-column justify-content-between align-items-center p-3 d-none d-md-flex"
       >
         <div class="logo"><img src="../img/Logo.svg" alt="Logo" /></div>
         <div class="icon play-pause-btn">
           <i class="fa-solid fa-play"></i>
         </div>
-        <!-- <div class="icon"><i class="fa-solid fa-play"></i></div> -->
         <div class="icon"><i class="fa-solid fa-microphone"></i></div>
         <div class="icon"><i class="fa-solid fa-book-open-reader"></i></div>
         <div class="icon"><i class="fa-solid fa-print"></i></div>
         <div class="icon"><i class="fa-solid fa-folder-closed"></i></div>
         <div class="logo"><img src="../img/Logo.svg" alt="Logo" /></div>
+      </div>
+      <!-- Bottom Navbar for Mobile -->
+      <div
+        class="d-md-none fixed-bottom bg-primary d-flex justify-content-around p-2"
+      >
+        <div class="icon play-pause-btn" onclick="togglePlayPause()">
+          <i class="fa-solid fa-play" id="mobile-play-pause-icon"></i>
+        </div>
+        <div class="icon"><i class="fa-solid fa-microphone"></i></div>
+        <div class="icon"><i class="fa-solid fa-book-open-reader"></i></div>
+        <div class="icon"><i class="fa-solid fa-print"></i></div>
+        <div class="icon"><i class="fa-solid fa-folder-closed"></i></div>
       </div>
     </div>
 
@@ -118,18 +129,18 @@
               listItem.addEventListener("click", () => {
                 fetchLyrics(item.lyrics).then((lyricsData) => {
                   document.getElementById("units-container").innerHTML = `
-                    <div class="container">
-                      <h2 class="text-center fw-bold">${item.unit}</h2>
-                      <div class="row">
-                        <div class="col-md-7 d-flex justify-content-center">
-                          <img src="${item.image}" class="img-fluid" alt="${item.alt}" />
-                        </div>
-                        <div class="col-md-5">
-                          <div id="lyrics-container" class="lyrics-box"></div>
-                        </div>
-                      </div>
-                    </div>
-                  `;
+              <div class="container">
+                <h2 class="text-center fw-bold">${item.unit}</h2>
+                <div class="row">
+                  <div class="col-md-7 d-flex justify-content-center">
+                    <img src="${item.image}" class="img-fluid" alt="${item.alt}" />
+                  </div>
+                  <div class="col-md-5">
+                    <div id="lyrics-container" class="lyrics-box"></div>
+                  </div>
+                </div>
+              </div>
+            `;
                   currentAudio.src = item.audio;
                   currentAudio.pause();
                   updatePlayPauseIcon(false);
@@ -194,7 +205,7 @@
                 activeLine.scrollIntoView({
                   behavior: "smooth",
                   block: "center",
-                }); // Auto-scroll karaoke
+                });
               }
             });
           }
@@ -202,6 +213,9 @@
           let currentAudio = new Audio();
           const playPauseButton = document.querySelector(".play-pause-btn");
           const playPauseIcon = playPauseButton.querySelector("i");
+          const mobilePlayPauseIcon = document.getElementById(
+            "mobile-play-pause-icon"
+          );
 
           playPauseButton.addEventListener("click", () => {
             if (currentAudio.src) {
@@ -215,16 +229,31 @@
             }
           });
 
+          mobilePlayPauseIcon.addEventListener("click", togglePlayPause);
+
+          function togglePlayPause() {
+            if (currentAudio.src) {
+              if (currentAudio.paused) {
+                currentAudio.play();
+                updatePlayPauseIcon(true);
+              } else {
+                currentAudio.pause();
+                updatePlayPauseIcon(false);
+              }
+            }
+          }
+
           currentAudio.addEventListener("ended", () => {
             updatePlayPauseIcon(false);
           });
 
           function updatePlayPauseIcon(isPlaying) {
-            if (isPlaying) {
-              playPauseIcon.className = "fa-solid fa-pause";
-            } else {
-              playPauseIcon.className = "fa-solid fa-play";
-            }
+            playPauseIcon.className = isPlaying
+              ? "fa-solid fa-pause"
+              : "fa-solid fa-play";
+            mobilePlayPauseIcon.className = isPlaying
+              ? "fa-solid fa-pause"
+              : "fa-solid fa-play";
           }
         })
         .catch((error) => console.error("Error loading data:", error));
