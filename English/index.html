@@ -16,48 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <title>English Units</title>
-    <style>
-      body {
-        font-family: "Delius", sans-serif;
-        background-color: #2e7eff;
-      }
-      .sticky-title {
-        background-color: #2e7eff;
-        color: #f8ff1e;
-        font-weight: bold;
-      }
-      .icon:hover {
-        color: #fff;
-      }
-      .fa-solid {
-        font-size: 20px;
-      }
-      .fa-bars {
-        color: #f8ff1e;
-      }
-      /* Bỏ thanh cuộn nhưng vẫn cho phép cuộn nội dung */
-      .sidebar {
-        overflow-y: scroll; /* Cho phép cuộn dọc */
-        scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
-        -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
-        height: 100vh; /* Chiều cao full màn hình */
-      }
-
-      /* Ẩn thanh cuộn trên Chrome, Safari */
-      .sidebar::-webkit-scrollbar {
-        display: none;
-      }
-
-      /* Giữ tiêu đề sách cố định khi cuộn */
-      .sticky-title {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        background-color: #2e7eff;
-        padding: 10px;
-        font-weight: bold;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container-fluid d-flex p-0">
@@ -155,17 +114,39 @@
               listItem.classList.add("p-2", "border-bottom");
               listItem.addEventListener("click", () => {
                 document.getElementById("units-container").innerHTML = `
-                  <div class="container">
-                    <h2 class="text-center fw-bold">${item.unit}</h2>
-                    <div class="row">
-                      <div class="col-md-7 d-flex justify-content-center"><img src="${item.image}" class="img-fluid" alt="${item.alt}" /></div>
-                      <div class="col-md-5">${item.lyrics}</div>
-                    </div>
-                  </div>
-                `;
+            <div class="container">
+              <h2 class="text-center fw-bold">${item.unit}</h2>
+              <div class="row">
+                <div class="col-md-7 d-flex justify-content-center"><img src="${item.image}" class="img-fluid" alt="${item.alt}" /></div>
+                <div class="col-md-5">${item.lyrics}</div>
+              </div>
+            </div>
+          `;
               });
               bookList.appendChild(listItem);
             });
+          });
+
+          // Audio play/pause functionality
+          let currentAudio = null;
+          const audioSrc = data.find((item) => item.book === "book1")?.audio;
+          if (audioSrc) {
+            currentAudio = new Audio(audioSrc);
+          }
+
+          const playButton = document.querySelector(".fa-play");
+          playButton.addEventListener("click", () => {
+            if (currentAudio) {
+              if (currentAudio.paused) {
+                currentAudio.play();
+                playButton.classList.remove("fa-play");
+                playButton.classList.add("fa-pause");
+              } else {
+                currentAudio.pause();
+                playButton.classList.remove("fa-pause");
+                playButton.classList.add("fa-play");
+              }
+            }
           });
         })
         .catch((error) => console.error("Error loading data:", error));

@@ -1,0 +1,40 @@
+body {
+  font-family: "Delius", sans-serif;
+  background-color: #2e7eff;
+}
+.sticky-title {
+  background-color: #2e7eff;
+  color: #f8ff1e;
+  font-weight: bold;
+}
+.icon:hover {
+  color: #fff;
+}
+.fa-solid {
+  font-size: 20px;
+}
+.fa-bars {
+  color: #f8ff1e;
+}
+/* Bỏ thanh cuộn nhưng vẫn cho phép cuộn nội dung */
+.sidebar {
+  overflow-y: scroll; /* Cho phép cuộn dọc */
+  scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+  -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
+  height: 100vh; /* Chiều cao full màn hình */
+}
+
+/* Ẩn thanh cuộn trên Chrome, Safari */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Giữ tiêu đề sách cố định khi cuộn */
+.sticky-title {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #2e7eff;
+  padding: 10px;
+  font-weight: bold;
+}
