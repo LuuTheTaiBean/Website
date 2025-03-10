@@ -5,32 +5,372 @@
     "lyrics": "./Lyrics/1_01-00.lrc",
     "image": "./img/01__1--Image.svg",
     "audio": "./Audio/1_01-00.mp3",
-    "alt": "Greetings"
+    "alt": "Unit 1: Hello"
   },
   {
     "book": "book1",
-    "unit": "Unit 2: Introductions",
-    "lyrics": "My name is John.",
-    "image": "example2.jpg",
-    "alt": "Introductions"
+    "unit": "Unit 2: Excuse me!",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
   },
   {
     "book": "book1",
-    "unit": "Unit 3: Family",
-    "lyrics": "This is my family.",
-    "image": "example3.jpg",
-    "alt": "Family"
+    "unit": "Unit 3: What is it?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
   },
   {
     "book": "book1",
-    "unit": "Unit 4: Numbers",
-    "lyrics": "One, two, three...",
-    "image": "example4.jpg",
-    "alt": "Numbers"
+    "unit": "Unit 4: What's your name?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
   },
+  {
+    "book": "book1",
+    "unit": "Unit 5: I'm cold.",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 6: A nice flat",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 7: Everyday Conversation",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 8: A family re-union",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 9: Whose is it?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 10: Is there any wine in the bottle?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 11: An English Restaurant",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 12: Do this! Don't do that?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 13: Elton Kash",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 14: At the hairdresser's",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 15: Everyday Conversation",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 16: Gloria Gusto, Tom Atkins and Terry Archer",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 17: At the customs",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 18: Which one?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 19: Everyday Conversation",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 20: A postcard",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 21: What are they doing?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 22: Can you help me?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 23: Everyday Conversation",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 24: The fashion show",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 25: At the cinema",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 26: What's on television tonight?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 27: In prison",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 29: Computer dating",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 30: I want you, Fiona.",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 31: Everyday Conversation",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 32: An interview",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 33: Every day",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 34: What's My Job?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 35: Never on a Sunday.",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 36: A Questionnaire",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 37: What does he do every day?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 38: Well or badly?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 39: Everyday Conversation",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 40: A personal letter",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 41: Where were you yesterday?",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 42: Holidays",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 43: Everyday Conversation",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 44: Return from Space",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 45: Yes, dear!",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 46: In the office",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+  {
+    "book": "book1",
+    "unit": "Unit 47: The Story of Willy The Kid",
+    "lyrics": "./Lyrics/1_01-00.lrc",
+    "image": "./img/01__1--Image.svg",
+    "audio": "./Audio/1_01-00.mp3",
+    "alt": "Unit 1: Hello"
+  },
+
   {
     "book": "book2",
-    "unit": "Unit 1: Colors",
+    "unit": "Unit ",
     "lyrics": "Red, blue, green...",
     "image": "example5.jpg",
     "alt": "Colors"
