@@ -113,41 +113,101 @@
               listItem.textContent = item.unit;
               listItem.classList.add("p-2", "border-bottom");
               listItem.addEventListener("click", () => {
-                document.getElementById("units-container").innerHTML = `
-            <div class="container">
-              <h2 class="text-center fw-bold">${item.unit}</h2>
-              <div class="row">
-                <div class="col-md-7 d-flex justify-content-center"><img src="${item.image}" class="img-fluid" alt="${item.alt}" /></div>
-                <div class="col-md-5">${item.lyrics}</div>
-              </div>
-            </div>
-          `;
+                fetchLyrics(item.lyrics).then((lyricsData) => {
+                  document.getElementById("units-container").innerHTML = `
+                    <div class="container">
+                      <h2 class="text-center fw-bold">${item.unit}</h2>
+                      <div class="row">
+                        <div class="col-md-7 d-flex justify-content-center">
+                          <img src="${item.image}" class="img-fluid" alt="${item.alt}" />
+                        </div>
+                        <div class="col-md-5">
+                          <div id="lyrics-container" class="lyrics-box"></div>
+                        </div>
+                      </div>
+                    </div>
+                  `;
+                  currentAudio.src = item.audio;
+                  currentAudio.play();
+                  displayLyrics(lyricsData);
+                });
               });
               bookList.appendChild(listItem);
             });
           });
 
-          // Audio play/pause functionality
-          let currentAudio = null;
-          const audioSrc = data.find((item) => item.book === "book1")?.audio;
-          if (audioSrc) {
-            currentAudio = new Audio(audioSrc);
+          // Hàm tải file .lrc
+          function fetchLyrics(lyricsPath) {
+            return fetch(lyricsPath)
+              .then((response) => response.text())
+              .then((text) => parseLyrics(text))
+              .catch((error) => []);
           }
 
+          // Hàm phân tích file .lrc
+          function parseLyrics(lyrics) {
+            const lines = lyrics.split("\n");
+            return lines
+              .map((line) => {
+                const match = line.match(/\[(\d+):(\d+\.\d+)\](.*)/);
+                if (match) {
+                  const minutes = parseInt(match[1]);
+                  const seconds = parseFloat(match[2]);
+                  const time = minutes * 60 + seconds;
+                  const text = match[3].trim();
+                  return { time, text };
+                }
+                return null;
+              })
+              .filter((line) => line !== null);
+          }
+
+          // Hiển thị lyrics và tô màu theo thời gian
+          function displayLyrics(lyricsData) {
+            const lyricsContainer = document.getElementById("lyrics-container");
+            lyricsContainer.innerHTML = lyricsData
+              .map((line) => `<p data-time="${line.time}">${line.text}</p>`)
+              .join("");
+
+            currentAudio.addEventListener("timeupdate", () => {
+              const currentTime = currentAudio.currentTime;
+              let activeLine = null;
+
+              lyricsData.forEach((line, index) => {
+                const nextLine = lyricsData[index + 1];
+                if (
+                  currentTime >= line.time &&
+                  (!nextLine || currentTime < nextLine.time)
+                ) {
+                  activeLine = document.querySelector(
+                    `p[data-time="${line.time}"]`
+                  );
+                }
+              });
+
+              if (activeLine) {
+                document
+                  .querySelectorAll("#lyrics-container p")
+                  .forEach((p) => (p.style.color = "black"));
+                activeLine.style.color = "yellow";
+              }
+            });
+          }
+
+          // Chức năng phát/tạm dừng nhạc
+          let currentAudio = new Audio();
           const playButton = document.querySelector(".fa-play");
           const icon = playButton.closest(".icon");
 
           icon.addEventListener("click", () => {
-            if (currentAudio) {
-              if (currentAudio.paused) {
-                currentAudio.play();
-                playButton.classList.remove("fa-play");
-                playButton.classList.add("fa-pause");
-              } else {
-                currentAudio.pause();
-                playButton.classList.remove("fa-pause");
-                playButton.classList.add("fa-play");
-              }
+            if (currentAudio.paused) {
+              currentAudio.play();
+              playButton.classList.remove("fa-play");
+              playButton.classList.add("fa-pause");
+            } else {
+              currentAudio.pause();
+              playButton.classList.remove("fa-pause");
+              playButton.classList.add("fa-play");
             }
           });
 
