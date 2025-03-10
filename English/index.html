@@ -131,8 +131,8 @@
                     </div>
                   `;
                   currentAudio.src = item.audio;
-                  currentAudio.play();
-                  updatePlayPauseIcon(true);
+                  currentAudio.pause();
+                  updatePlayPauseIcon(false);
                   displayLyrics(lyricsData);
                 });
               });
