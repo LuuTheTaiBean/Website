@@ -55,7 +55,6 @@
           <ul id="book4" class="list-unstyled d-none"></ul>
         </ul>
       </div>
-
       <!-- Offcanvas button -->
       <button
         class="btn btn-success position-fixed top-0 end-0 m-3 d-md-none"
@@ -66,10 +65,9 @@
       >
         <i class="fa-solid fa-bars"></i>
       </button>
-
       <!-- Offcanvas -->
       <div
-        class="offcanvas offcanvas-end"
+        class="offcanvas offcanvas-end w-75"
         tabindex="-1"
         id="bookOffcanvas"
         aria-labelledby="bookOffcanvasLabel"
@@ -119,7 +117,6 @@
           </ul>
         </div>
       </div>
-
       <!-- Content -->
       <div class="col-md-9 p-3">
         <div id="units-container"></div>
@@ -151,7 +148,6 @@
         <div class="icon"><i class="fa-solid fa-folder-closed"></i></div>
       </div>
     </div>
-
     <script>
       fetch("data.json")
         .then((response) => response.json())
@@ -163,34 +159,45 @@
             const bookList = document.getElementById(book);
             const offcanvasList = document.getElementById(book + "-offcanvas");
             books[book].forEach((item) => {
+              // Sidebar item
               const listItem = document.createElement("li");
               listItem.textContent = item.unit;
               listItem.classList.add("p-2", "border-bottom");
-              listItem.addEventListener("click", () => {
-                fetchLyrics(item.lyrics).then((lyricsData) => {
-                  document.getElementById("units-container").innerHTML = `
-              <div class="container">
-                <h2 class="text-center fw-bold">${item.unit}</h2>
-                <div class="row">
-                  <div class="col-md-7 d-flex justify-content-center">
-                    <img src="${item.image}" class="img-fluid" alt="${item.alt}" />
-                  </div>
-                  <div class="col-md-5">
-                    <div id="lyrics-container" class="lyrics-box"></div>
-                  </div>
-                </div>
-              </div>
-            `;
-                  currentAudio.src = item.audio;
-                  currentAudio.pause();
-                  updatePlayPauseIcon(false);
-                  displayLyrics(lyricsData);
-                });
-              });
+              listItem.addEventListener("click", () => loadUnitContent(item));
               bookList.appendChild(listItem);
-              offcanvasList.appendChild(listItem.cloneNode(true));
+
+              // Offcanvas item
+              const offcanvasItem = document.createElement("li");
+              offcanvasItem.textContent = item.unit;
+              offcanvasItem.classList.add("p-2", "border-bottom");
+              offcanvasItem.addEventListener("click", () =>
+                loadUnitContent(item)
+              );
+              offcanvasList.appendChild(offcanvasItem);
             });
           });
+
+          function loadUnitContent(item) {
+            fetchLyrics(item.lyrics).then((lyricsData) => {
+              document.getElementById("units-container").innerHTML = `
+          <div class="container">
+            <h2 class="text-center fw-bold">${item.unit}</h2>
+            <div class="row">
+              <div class="col-md-7 d-flex justify-content-center">
+                <img src="${item.image}" class="img-fluid" alt="${item.alt}" />
+              </div>
+              <div class="col-md-5">
+                <div id="lyrics-container" class="lyrics-box"></div>
+              </div>
+            </div>
+          </div>
+        `;
+              currentAudio.src = item.audio;
+              currentAudio.pause();
+              updatePlayPauseIcon(false);
+              displayLyrics(lyricsData);
+            });
+          }
 
           function fetchLyrics(lyricsPath) {
             return fetch(lyricsPath)
@@ -258,18 +265,7 @@
             "mobile-play-pause-icon"
           );
 
-          playPauseButton.addEventListener("click", () => {
-            if (currentAudio.src) {
-              if (currentAudio.paused) {
-                currentAudio.play();
-                updatePlayPauseIcon(true);
-              } else {
-                currentAudio.pause();
-                updatePlayPauseIcon(false);
-              }
-            }
-          });
-
+          playPauseButton.addEventListener("click", togglePlayPause);
           mobilePlayPauseIcon.addEventListener("click", togglePlayPause);
 
           function togglePlayPause() {
