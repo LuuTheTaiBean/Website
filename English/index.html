@@ -135,7 +135,9 @@
           }
 
           const playButton = document.querySelector(".fa-play");
-          playButton.addEventListener("click", () => {
+          const icon = playButton.closest(".icon");
+
+          icon.addEventListener("click", () => {
             if (currentAudio) {
               if (currentAudio.paused) {
                 currentAudio.play();
@@ -147,6 +149,11 @@
                 playButton.classList.add("fa-play");
               }
             }
+          });
+
+          currentAudio.addEventListener("ended", () => {
+            playButton.classList.remove("fa-pause");
+            playButton.classList.add("fa-play");
           });
         })
         .catch((error) => console.error("Error loading data:", error));
