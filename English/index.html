@@ -67,13 +67,15 @@
       </button>
       <!-- Offcanvas -->
       <div
-        class="offcanvas offcanvas-end w-75"
+        class="offcanvas offcanvas-end w-75 bg-primary"
         tabindex="-1"
         id="bookOffcanvas"
         aria-labelledby="bookOffcanvasLabel"
       >
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="bookOffcanvasLabel">Book List</h5>
+          <h5 class="offcanvas-title" id="bookOffcanvasLabel">
+            Streamline English
+          </h5>
           <button
             type="button"
             class="btn-close"
@@ -81,7 +83,7 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body p-0">
           <ul class="list-unstyled">
             <li
               class="sticky-title p-3 bg-success"
@@ -137,7 +139,7 @@
       </div>
       <!-- Bottom Navbar for Mobile -->
       <div
-        class="d-md-none fixed-bottom bg-primary d-flex justify-content-around p-2"
+        class="d-md-none fixed-bottom bg-primary d-flex justify-content-around p-3"
       >
         <div class="icon play-pause-btn" onclick="togglePlayPause()">
           <i class="fa-solid fa-play" id="mobile-play-pause-icon"></i>
@@ -250,10 +252,11 @@
                   .querySelectorAll("#lyrics-container p")
                   .forEach((p) => (p.style.color = "black"));
                 activeLine.style.color = "yellow";
-                activeLine.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                });
+                // Tự động nhảy theo chữ màu vàng
+                // activeLine.scrollIntoView({
+                //   behavior: "smooth",
+                //   block: "center",
+                // });
               }
             });
           }
