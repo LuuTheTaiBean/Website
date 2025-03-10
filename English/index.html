@@ -62,9 +62,63 @@
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#bookOffcanvas"
+        aria-controls="bookOffcanvas"
       >
         <i class="fa-solid fa-bars"></i>
       </button>
+
+      <!-- Offcanvas -->
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="bookOffcanvas"
+        aria-labelledby="bookOffcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="bookOffcanvasLabel">Book List</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="list-unstyled">
+            <li
+              class="sticky-title p-3 bg-success"
+              onclick="toggleSubList('book1-offcanvas')"
+            >
+              Streamline English 1
+            </li>
+            <ul id="book1-offcanvas" class="list-unstyled d-none"></ul>
+
+            <li
+              class="sticky-title p-3 bg-success"
+              onclick="toggleSubList('book2-offcanvas')"
+            >
+              Streamline English 2
+            </li>
+            <ul id="book2-offcanvas" class="list-unstyled d-none"></ul>
+
+            <li
+              class="sticky-title p-3 bg-success"
+              onclick="toggleSubList('book3-offcanvas')"
+            >
+              Streamline English 3
+            </li>
+            <ul id="book3-offcanvas" class="list-unstyled d-none"></ul>
+
+            <li
+              class="sticky-title p-3 bg-success"
+              onclick="toggleSubList('book4-offcanvas')"
+            >
+              Streamline English 4
+            </li>
+            <ul id="book4-offcanvas" class="list-unstyled d-none"></ul>
+          </ul>
+        </div>
+      </div>
 
       <!-- Content -->
       <div class="col-md-9 p-3">
@@ -107,6 +161,7 @@
 
           Object.keys(books).forEach((book) => {
             const bookList = document.getElementById(book);
+            const offcanvasList = document.getElementById(book + "-offcanvas");
             books[book].forEach((item) => {
               const listItem = document.createElement("li");
               listItem.textContent = item.unit;
@@ -133,6 +188,7 @@
                 });
               });
               bookList.appendChild(listItem);
+              offcanvasList.appendChild(listItem.cloneNode(true));
             });
           });
 
@@ -248,5 +304,6 @@
         subList.classList.toggle("d-none");
       }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
